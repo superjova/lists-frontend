@@ -1,0 +1,27 @@
+<div class="ph-6">
+  <div class="row nmh-4">
+    {{#each model as |list| }}
+      <div class="col-sm-6 col-lg-4 ph-4 mt-6">
+        {{#link-to 'lists.show' list}}
+          <div class="pa-2 bs-sld bwa-1 bc-14">
+            <div class="row nmh-4">
+              <div class="col-sm-4 ph-4">
+                <img src="{{ list.image }}" class="img-responsive mh-a js-list-image" />
+              </div>
+              <div class="col-sm-8 ph-4">
+                <div class="pt-4 c-6 fs-5 fw-3">
+                  {{ list.name }}
+                </div>
+                <div class="row nmh-2">
+                  <div class="col-xs-6 ph-2 c-10 fs-4 fw-1">
+                    {{ list.productsCount }} products
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        {{/link-to}}
+      </div>
+    {{/each}}
+  </div>
+</div>

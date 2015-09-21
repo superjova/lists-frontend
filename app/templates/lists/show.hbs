@@ -1,0 +1,13 @@
+<div class="rel-xs pa-6 bg-15">
+  <div class="abs-xs left top ml-4 mt-4 c-blue">
+    {{#link-to "lists"}}&lt; back{{/link-to}}
+  </div>
+  <div class="c-3 fs-14 text-center">
+    {{ model.name }}
+  </div>
+</div>
+<div class="ph-6">
+  {{#each model.listItems as |listItem| }}
+    {{#list-item listItem=listItem}}{{/list-item}}
+  {{/each}}
+</div>

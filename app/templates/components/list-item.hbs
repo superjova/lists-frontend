@@ -1,0 +1,52 @@
+<div class="row nmh-4">
+  <div class="col-sm-4 col-md-3 ph-4 mt-4">
+    <a target="_blank" href="{{ listItem.product.url }}">
+      <div class="rel-xs">
+        <div class="row nmh-3">
+          <div class="col-xs-8 col-xs-offset-2 col-sm-10 col-sm-offset-1 ph-3">
+            <img src="{{ listItem.product.images.profile }}" class="img-responsive mh-a"/>
+          </div>
+        </div>
+        <a href="{{ listItem.product.url }}">
+          <div class="pa-4 mt-4 bg-green c-16 text-center">
+            ${{listItem.product.price}} on Amazon
+          </div>
+        </a>
+        <div class="abs-xs left top ph-4 pv-2 bg-blue c-16">
+          + {{listItem.totalScore}}
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="col-sm-8 col-md-9 ph-4 mt-4">
+    <div class="fs-7 fw-3">
+      {{ listItem.product.name }}
+    </div>
+    <div class="fs-6 fw-1">
+      {{ listItem.product.manufacturer }}
+    </div>
+    <div class="mt-4">
+      Fusce nulla ante, luctus eu metus sed, pretium venenatis elit. Donec bibendum consequat massa, quis tincidunt sem bibendum vitae. Fusce commodo facilisis nunc vel pretium. Pellentesque eu felis rhoncus justo porta laoreet. Ut eleifend velit a luctus venenatis. In vitae quam a dui faucibus sollicitudin eu ut arcu. Sed mi est, accumsan et sollicitudin non, iaculis id felis. Fusce ac libero et leo rutrum convallis. Vestibulum imperdiet purus vitae venenatis lacinia. Ut odio libero, congue id leo non, congue faucibus diam. Ut ut semper orci. Nunc ornare enim tortor, id auctor ligula feugiat vel. Donec pharetra ultrices magna eu aliquet. Phasellus ac urna et est dignissim sagittis. Nulla magna purus, convallis ac ultrices id, iaculis sed urna.
+    </div>
+    <div class="c-blue">
+      <a href="#">{{ listItem.user.username }}</a>
+    </div>
+    {{#each listItem.comments as |comment|}}
+      <div class="mt-4 pt-4 bs-sld bwt-1 bc-14">
+        <div class="row nmh-2">
+          <div class="col-sm-1 ph-2">
+            <img src="{{ comment.user.images.profile }}" class="img-responsive mh-a"/>
+          </div>
+          <div class="col-sm-11 ph-2">
+            <div class="c-blue">
+              {{ comment.user.username }}
+            </div>
+            <div>
+              {{ comment.text }}
+            </div>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>
