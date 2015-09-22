@@ -9,7 +9,10 @@ List = DS.Model.extend
   productsCount: DS.attr('number')
   currentScore: DS.attr('number')
   totalScore: DS.attr('number')
+  createdAt: DS.attr('date')
+  updatedAt: DS.attr('date')
 
   listItems: DS.hasMany('list-items', async: true)
+  user: DS.belongsTo('user', async: true)
 
 `export default List`

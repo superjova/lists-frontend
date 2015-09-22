@@ -5,6 +5,7 @@ User = DS.Model.extend
   username: DS.attr('string')
   images: DS.attr('product-image')
 
+  lists: DS.hasMany('lists', async: true)
   listItems: DS.hasMany('list-items', async: true)
 
 `export default User`

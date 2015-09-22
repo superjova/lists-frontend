@@ -8,6 +8,6 @@ Router = Ember.Router.extend
 Router.map ->
   @route 'lists', ->
     @route 'index', path: '/'
-    @route 'show', path: ':list_id'
+    @route 'show', path: ':id/:slug'
 
 `export default Router`

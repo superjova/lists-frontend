@@ -1,13 +1,39 @@
-<div class="rel-xs pa-6 bg-15">
-  <div class="abs-xs left top ml-4 mt-4 c-blue">
-    {{#link-to "lists"}}&lt; back{{/link-to}}
-  </div>
-  <div class="c-3 fs-14 text-center">
-    {{ model.name }}
+<div class="">
+  <h1 itemprop="name" class="ma-0 pa-0 c-3 fs-12">{{ model.name }}</h1>
+  <div class="">
+    <span class="c-blue">{{model.user.username}}</span> <span class="c-10">{{ format-date model.createdAt }}</span>
   </div>
 </div>
-<div class="ph-6">
-  {{#each model.listItems as |listItem| }}
-    {{#list-item listItem=listItem}}{{/list-item}}
-  {{/each}}
+<div class="mt-4 bs-sld bwt-1 bc-14">
+  <div class="row nmh-4">
+    <div class="col-lg-9 ph-4 mt-6">
+      <div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet ante a magna convallis, non laoreet felis venenatis. Pellentesque sit amet lacinia leo, quis elementum lorem. Sed leo quam, faucibus quis porttitor eu, luctus pulvinar arcu. Vivamus gravida maximus justo, et finibus erat commodo id. Integer sem dui, accumsan tincidunt interdum eu, finibus nec mauris. Mauris odio nunc, efficitur a fringilla vel, consequat sed velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut augue dui, ornare pellentesque auctor ac, condimentum ut nulla. Donec laoreet lacus viverra ipsum malesuada dignissim. Aliquam iaculis tincidunt est vitae dictum. Suspendisse mollis ut sapien ac scelerisque.<br/>
+        <br/>
+        <div class="row nmh-4">
+          <div class="col-sm-6 col-sm-offset-3 ph-4">
+            <img src="http://andersoncamp.com/wp-content/uploads/2012/11/Tent-Sites2.jpg" class="img-responsive mh-a"/>
+          </div>
+        </div>
+        Fusce sed auctor lacus, at efficitur dolor. In hac habitasse platea dictumst. Quisque efficitur vitae felis ultricies ultricies. Cras accumsan, purus ac auctor sollicitudin, elit diam laoreet lorem, at malesuada ipsum metus ac lacus. In mauris eros, mollis at eros in, bibendum accumsan nisi. Proin elementum massa eu ante efficitur, a scelerisque nisl auctor. Mauris non dolor non sapien porta porttitor non eu est. Praesent ac tortor posuere, mattis sem nec, vestibulum lacus. Morbi iaculis venenatis nunc sed placerat. Donec laoreet facilisis lacinia. Integer non augue vitae quam dignissim venenatis vel ut magna. Maecenas elementum quam ut massa cursus, eget pharetra lectus viverra. Aliquam non enim et ex consectetur porta. Aliquam finibus elit non rutrum consequat. Fusce ac venenatis ipsum, vel lacinia tellus. Fusce luctus efficitur scelerisque.<br/>
+        <br/>
+        Integer faucibus laoreet sem id commodo. Nulla suscipit dignissim massa, id euismod lectus sollicitudin vel. Praesent pharetra lectus sed risus facilisis rutrum. Fusce ultrices nisi non porta dapibus. Duis purus nulla, tincidunt sed maximus vel, sollicitudin sed est. Morbi sodales luctus ante quis posuere. In dapibus vestibulum dui, sit amet lacinia lacus.<br/>
+        <br/>
+        Nam interdum ultrices mi ornare scelerisque. Donec congue tincidunt efficitur. Quisque eu leo a massa eleifend tempor ac accumsan elit. Nullam consectetur ligula a lacus elementum fringilla. Ut nec justo lacinia, sollicitudin magna ac, facilisis lorem. Integer ac quam in justo porttitor semper vitae vitae mauris. Donec tincidunt pharetra cursus. Pellentesque non convallis urna.<br/>
+        <br/>
+        Pellentesque imperdiet dignissim purus, at vehicula nunc blandit nec. Ut mollis purus at efficitur feugiat. Nunc mollis neque aliquet mauris condimentum vestibulum. Mauris sagittis malesuada magna, eget convallis massa. Sed eget imperdiet metus. Nullam mi risus, placerat sed diam quis, viverra sagittis arcu. Vivamus rutrum diam eget eleifend hendrerit. Maecenas ultricies accumsan diam ac tincidunt. Suspendisse tincidunt turpis nec ex rhoncus aliquam ut sit amet mauris. Cras sed quam lobortis, iaculis erat id, facilisis magna. Suspendisse fermentum tristique luctus. Vestibulum finibus tellus non metus tincidunt, in vulputate sapien posuere.
+      </div>
+      <div class="mt-6 fs-12 fw-3">
+        {{model.listItems.length}} Products
+      </div>
+      <div class="mt-3 bs-sld bwt-1 bc-14">
+        {{#each model.listItems as |listItem| }}
+          {{#list-item listItem=listItem}}{{/list-item}}
+        {{/each}}
+      </div>
+    </div>
+    <div class="col-lg-3 ph-4 mt-6">
+      List side bar
+    </div>
+  </div>
 </div>

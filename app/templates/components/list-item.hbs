@@ -32,19 +32,15 @@
       <a href="#">{{ listItem.user.username }}</a>
     </div>
     {{#each listItem.comments as |comment|}}
-      <div class="mt-4 pt-4 bs-sld bwt-1 bc-14">
-        <div class="row nmh-2">
-          <div class="col-sm-1 ph-2">
-            <img src="{{ comment.user.images.profile }}" class="img-responsive mh-a"/>
-          </div>
-          <div class="col-sm-11 ph-2">
-            <div class="c-blue">
-              {{ comment.user.username }}
-            </div>
-            <div>
-              {{ comment.text }}
-            </div>
-          </div>
+      <div class="mt-4 pt-4 fs-4 bs-sld bwt-1 bc-14">
+        <div>
+          {{ comment.text }}
+        </div>
+        <div class="text-right">
+          <span class="c-blue">{{ comment.user.username }}</span>
+        </div>
+        <div class="text-right">
+          <span class="c-10">{{ format-date comment.createdAt }}</span>
         </div>
       </div>
     {{/each}}
